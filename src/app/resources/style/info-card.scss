@@ -1,0 +1,12 @@
+@use "./_variables.scss" as var;
+
+.info-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var.$radius;
+    background-color: var.$burnt-umber;
+    padding: 20px;
+    margin: 40px auto;
+}
