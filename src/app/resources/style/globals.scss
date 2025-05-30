@@ -1,12 +1,5 @@
 @use "./_variables.scss" as var;
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background: #0a0a0a;
-//     --foreground: #ededed;
-//   }
-// }
-
 html,
 body {
   max-width: 100vw;
@@ -14,9 +7,9 @@ body {
 }
 
 body {
-  color: var.$text-color;
-  background: var.$prussian-blue;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var.$text;
+  background: var.$base;
+  font-family: "Courier New", "Times New Roman", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,8 +25,56 @@ a {
   text-decoration: none;
 }
 
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-// }
+main {
+  display: flex;
+  // align-items: center;
+  margin: 40px 0;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 80px);
+}
+
+.slide-in {
+  position: relative;
+  animation: slideInRotate 0.4s ease-out forwards;
+  transform-origin: center;
+  transform: rotate(-5deg);
+}
+
+@keyframes slideInRotate {
+  0% {
+    transform: translateX(-100%) scale(1.025) rotate(-10deg);
+    opacity: 0;
+  }
+  40% {
+    transform: translateX(10px) scale(1.025) rotate(5deg);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(0) scale(1.025) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+}
+
+
+
+.pop-in {
+  animation: popIn 0.2s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
