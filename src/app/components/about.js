@@ -9,7 +9,7 @@ export default function About() {
             <hr className="accent1" />
             <section>
                 <p>
-                    I am a software engineering student at the University of New Brunswick, with a passion for web development and a keen interest in exploring new technologies. I have experience in various programming languages and frameworks, and I am always eager to learn more. My goal is to create innovative solutions that make a positive impact on people´s lives.
+                    I am a software engineering student at the University of New Brunswick, with 
                 </p>
             </section>
         </article>
