@@ -34,6 +34,18 @@ main {
   height: calc(100vh - 80px);
 }
 
+.promenent-button {
+  display: inline-flex;
+  background-color: var.$accent1;
+  color: var.$base;
+  padding: 10px 20px;
+  font-size: 1em;
+  width: auto;
+  align-self: flex-start;
+  border-radius: var.$radius2;
+}
+
+// Animation styles
 .slide-in {
   position: relative;
   animation: slideInRotate 0.4s ease-out forwards;
@@ -76,5 +88,84 @@ main {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+
+.slide-in-left {
+  animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-right {
+  animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInLeft {
+  from {
+    // opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    // opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    // opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    // opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-100%);
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+}
+
+@keyframes slideOutLeft {
+  from {
+    // opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    // opacity: 1;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    // opacity: 0;
+    transform: translateX(0%);
+  }
+  to {
+    // opacity: 1;
+    transform: translateX(100%);
+  }
+}
+
+
+.bobble {
+  animation: bobble 3s ease-in-out infinite;
+}
+@keyframes bobble {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
   }
 }

@@ -1,0 +1,31 @@
+@use "./_variables.scss" as var;
+
+#nav-buttons {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 50px;
+    justify-content: right;
+    border-bottom-left-radius: var.$radius;
+    overflow: hidden;
+
+    background-color: var.$overlay1;
+
+    button {
+        width: calc(100% / 2);
+        background-color: transparent;
+        border: none;
+        color: var.$subtext1;
+
+        &:hover {
+            background-color: var.$overlay3;
+            color: var.$accent1;
+        }
+
+        selected {
+            color: var.$accent1;
+        }
+    }
+}
