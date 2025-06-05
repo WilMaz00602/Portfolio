@@ -12,6 +12,12 @@ export default function About() {
                     I am a software engineering student at the University of New Brunswick, with 
                 </p>
             </section>
+            <section>
+                <h2>What I Do</h2>
+            </section>
+            <section>
+                <h2>Skills</h2>
+            </section>
         </article>
     )
 }
