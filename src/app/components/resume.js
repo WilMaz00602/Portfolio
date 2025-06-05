@@ -1,6 +1,16 @@
 import styles from "../resources/style/resume.scss";
 
 export default function Resume() {
+
+    function downloadCV() {
+        const link = document.createElement('a');
+        link.href = '/resume.pdf'; // Path to your CV file
+        link.download = 'Will_Mazerolle_Resume.pdf'; // Name for the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
     return (
         <article className="resume-article">
             <header>
@@ -8,12 +18,14 @@ export default function Resume() {
             </header>
             <hr className="accent1" />
             <section>
+                <img src="/summary.svg"></img>
                 <h2>Professional Summary</h2>
                 <p>
                     Versatile Software Engineering student talented at contributing to team developed projects. Collaborative designer of useful solutions and modular software systems. Knowledgeable in programming and extremely passionate about technology. Energetic personality that is motivated by learning.
                 </p>
             </section>
             <section>
+                <img src="/work.svg"></img>
                 <h2>Work History</h2>
                 <div>
                     <h3>Mach85 Inc. - Software Developer</h3>
@@ -63,6 +75,7 @@ export default function Resume() {
                 </div>
             </section>
             <section>
+                <img src="/school.svg"></img>
                 <h2>Education</h2>
                 <div>
                     <h3>University of New Brunswick</h3>
@@ -70,12 +83,13 @@ export default function Resume() {
                     <span>Expected Graduation: 05/2026</span>
                     <ul>
                         <li>Bachelor of Science in Software Engineering</li>
-                        <li><strong>Dean's List</strong> [2021-Present] with a <strong>4.0/4.3 GPA</strong></li>
+                        <li><strong>Dean&apos;s List</strong> [2021-Present] with a <strong>4.0/4.3 GPA</strong></li>
                         <li>Relevant Coursework: Software Engineering, Web Development, Database Management, Algorithms and Data Structures</li>
                     </ul>
                 </div>
             </section>
             <section>
+                <img src="/skills.svg"></img>
                 <h2>Skills</h2>
                 <div>
                     <ul>
@@ -88,7 +102,7 @@ export default function Resume() {
                 </div>
                 
             </section>
-            <button className="promenent-button">Download CV</button>
+            <button className="promenent-button" onClick={downloadCV}>Download CV</button>
         </article>
         
     )

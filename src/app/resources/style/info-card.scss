@@ -66,8 +66,10 @@
         margin-top: 20px;
 
         svg {
-            width: 30px;
-            height: 30px;
+            --size: 30px;
+            width: var(--size);
+            height: var(--size);
+            margin-top: calc((40px - var(--size)) / 2);
             margin-left: 10px;
             fill: var.$accent1;
         }

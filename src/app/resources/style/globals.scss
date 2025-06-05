@@ -34,6 +34,10 @@ main {
   height: calc(100vh - 80px);
 }
 
+button {
+  cursor: pointer;
+}
+
 .promenent-button {
   display: inline-flex;
   background-color: var.$accent1;
@@ -43,6 +47,7 @@ main {
   width: auto;
   align-self: flex-start;
   border-radius: var.$radius2;
+  border: 1px solid var.$overlay1;
 }
 
 // Animation styles
@@ -92,12 +97,12 @@ main {
 }
 
 
-.slide-in-left {
-  animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.slide-in-right {
+  animation: slideInLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.slide-in-right {
-  animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.slide-in-left {
+  animation: slideInRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes slideInLeft {
@@ -123,12 +128,12 @@ main {
 }
 
 .slide-out-left {
-  animation: slideOutLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideOutLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-100%);
 }
 
 .slide-out-right {
-  animation: slideOutRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideOutRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(100%);
 }
 
