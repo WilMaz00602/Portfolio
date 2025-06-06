@@ -125,10 +125,12 @@
     #info-card {
         flex-direction: row;
         width: 90%;
-        height: auto;
         margin-left: 10%;
         margin-right: 10%;
-        
+
+        height: fit-content !important;
+        min-height: 0 !important;
+        max-height: none !important;
         
         #info-card-title {
             width: 30%;
