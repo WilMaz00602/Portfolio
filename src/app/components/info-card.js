@@ -30,14 +30,14 @@ export default function InfoCard() {
                     <PhoneIcon />
                     <div className="contact-text">
                         <h3>Phone</h3>
-                        <a>+1 (506) 962-7653</a>
+                        <a href="tel:1-506-962-7653">+1 (506) 962-7653</a>
                     </div>
                 </li>
                 <li>
                     <LocationIcon />
                     <div className="contact-text">
                         <h3>Location</h3>
-                        <a>Fredericton, NB, Canada</a>
+                        <a href="https://www.google.com/maps/place/Fredericton,+NB/" target="_blank">Fredericton, NB, Canada</a>
                     </div>
                 </li>
             </ul>
