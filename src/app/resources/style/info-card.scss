@@ -125,6 +125,7 @@
     #info-card {
         flex-direction: row;
         width: 90%;
+        min-width: 615px;
         margin-left: 10%;
         margin-right: 10%;
 
@@ -134,7 +135,7 @@
         
         #info-card-title {
             width: 30%;
-            min-width: 200px;
+            min-width: 240px;
 
             padding-bottom: 0;
             margin-bottom: 0;
@@ -146,7 +147,8 @@
         }
 
         #info-card-contact {
-            width: 30%;
+            width: 40%;
+            min-width: 275px;
             margin-right: 20px;
         }
 

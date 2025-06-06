@@ -12,8 +12,7 @@
     border: 1px solid var.$overlay1;
     border-radius: var.$radius;
     box-shadow: var.$shadow;
-    overflow: hidden scroll;
-
+    overflow: hidden auto; // TODO, fix styling issues with overflow
 
     z-index: 1;
 
