@@ -14,6 +14,26 @@ export default function About() {
             </section>
             <section>
                 <h2>What I Do</h2>
+                <div className="work-row">
+                    <div className="work-item">
+                        <h3>Frontend Development</h3>
+                        <p>Professional experience developing frontend applications designed for web and desktop environments</p>
+                    </div>
+                    <div className="work-item">
+                        <h3>Software Testing</h3>
+                        <p>Automated and manual testing experience for web and desktop applications</p>
+                    </div>
+                </div>
+                <div className="work-row">
+                    <div className="work-item">
+                        <h3>Embedded Systems</h3>
+                        <p>Practice in electronics design and embedded systems development and keen on doing more</p>
+                    </div>
+                    <div className="work-item">
+                        <h3>Algorithm Design</h3>
+                        <p>Experience in writing data processing and algebraic algorithms to develop custom backend solutions</p>
+                    </div>
+                </div>
             </section>
             <section>
                 <h2>Skills</h2>
