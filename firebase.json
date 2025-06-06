@@ -5,6 +5,14 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [],
+    "redirects": [
+      {
+        "source": "www.willmaz.com",
+        "destination": "https://willmaz.com",
+        "type": 301
+      }
     ]
   }
 }

@@ -62,3 +62,34 @@
     }
 
 }
+
+@media only screen and (max-width: var.$tablet-threshold) and (min-width: var.$phone-threshold) {
+    #main-content {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: var.$phone-threshold) {
+    #main-content {
+        width: 100%;
+        margin-left: 4%;
+        margin-right: 4%;
+
+        .tab-container {
+
+            div {
+                article {
+                    section {
+                        margin-left: 3%;
+                        // margin-right: 15px;
+                        width: 94%;
+                    }
+                }
+            }
+           
+            
+        }
+    }
+}

@@ -27,11 +27,20 @@ a {
 
 main {
   display: flex;
+  flex-wrap: wrap;
   // align-items: center;
   margin: 40px 0;
   justify-content: center;
   width: 100vw;
   height: calc(100vh - 80px);
+}
+
+@media only screen and (max-width: var.$phone-threshold) {
+  /* For mobile phones: */
+  .main, .left, .right {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 button {

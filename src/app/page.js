@@ -46,7 +46,7 @@ export default function Home() {
         <div>
             <main>
                 <InfoCard />
-                <div id="main-content" className="pop-in">
+                <div id="main-content" className="pop-in right">
                     <div className="tab-container">
                         {PrevComponent && (
                             <div

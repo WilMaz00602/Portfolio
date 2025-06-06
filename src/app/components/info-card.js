@@ -8,7 +8,7 @@ import GitHubIcon from "../resources/images/github.js";
 
 export default function InfoCard() {
     return (
-        <div id="info-card" className="slide-in">
+        <div id="info-card" className="slide-in left">
             <div id="info-card-title">
                 <img
                     src="/headshot.jpg"
@@ -18,7 +18,6 @@ export default function InfoCard() {
                 <h2>Will Mazerolle</h2>
                 <span>Software Developer</span>
             </div>
-            <hr/>
             <ul id="info-card-contact">
                 <li>
                     <MailIcon />
