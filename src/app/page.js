@@ -53,6 +53,7 @@ export default function Home() {
                                 key={prevTab}
                                 className={`tab-animating slide-out-${direction}`}
                                 style={{ position: "absolute", width: "100%", height: "100%" }}
+                                onAnimationEnd={() => setPrevTab(null)}
                             >
                                 <PrevComponent id={prevTab} />
                             </div>
