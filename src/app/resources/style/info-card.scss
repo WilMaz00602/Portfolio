@@ -46,7 +46,7 @@
     h2 {
         font-size: x-large;
         text-align: center;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        text-shadow: -1px -1px 0 var.$base, 1px -1px 0 var.$base, -1px 1px 0 var.$base, 1px 1px 0 var.$base;
     }
 
     span {
@@ -58,7 +58,6 @@
         padding: 4px;
         margin: 20px 40px 0;
         text-align: center;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 }
 
