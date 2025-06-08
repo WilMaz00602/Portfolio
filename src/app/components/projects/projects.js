@@ -1,6 +1,43 @@
 import styles from "../../resources/style/projects.scss";
-
 import ProjectTile from "./project-tile";
+
+const projects = [
+    {
+        name: "Example Project1",
+        description: "This is an example project description.1",
+        link: "https://example.com"
+    },
+    {
+        name: "Example Project2",
+        description: "This is an example project description.2",
+        link: "https://example.com"
+    },
+    {
+        name: "Example Project3",
+        description: "This is an example project description.3",
+        link: "https://example.com"
+    },
+    {
+        name: "Example Project4",
+        description: "This is an example project description.4",
+        link: "https://example.com"
+    },
+    {
+        name: "Example Project5",
+        description: "This is an example project description.5",
+        link: "https://example.com"
+    },
+    {
+        name: "Example Project6",
+        description: "This is an example project description.6",
+        link: "https://example.com"
+    },
+    {
+        name: "Example Project7",
+        description: "This is an example project description.7",
+        link: "https://example.com"
+    }
+];
 
 export default function Projects() {
     return (
@@ -14,52 +51,13 @@ export default function Projects() {
                     My best work is under NDA, but here are some of my personal projects!
                 </p>
             </section>
-            <section >
+            <section>
                 <div className="projects-container">
-                    <ProjectTile
-                        project={{
-                            name: "Example Project1",
-                            description: "This is an example project description.1",
-                            link: "https://example.com"}}
-                    />
-                    <ProjectTile
-                        project={{
-                            name: "Example Project2",
-                            description: "This is an example project description.2",
-                            link: "https://example.com"}}
-                    />
-                    <ProjectTile
-                        project={{
-                            name: "Example Project3",
-                            description: "This is an example project description.3",
-                            link: "https://example.com"}}
-                    />
-                    <ProjectTile
-                        project={{
-                            name: "Example Project4",
-                            description: "This is an example project description.4",
-                            link: "https://example.com"}}
-                    />
-                    <ProjectTile
-                        project={{
-                            name: "Example Project5",
-                            description: "This is an example project description.5",
-                            link: "https://example.com"}}
-                    />
-                    <ProjectTile
-                        project={{
-                            name: "Example Project6",
-                            description: "This is an example project description.6",
-                            link: "https://example.com"}}
-                    />
-                    <ProjectTile
-                        project={{
-                            name: "Example Project7",
-                            description: "This is an example project description.7",
-                            link: "https://example.com"}}
-                    />
+                    {projects.map((project, idx) => (
+                        <ProjectTile key={idx} project={project} />
+                    ))}
                 </div>
             </section>
         </article>
-    )
+    );
 }
