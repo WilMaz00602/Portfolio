@@ -5,6 +5,61 @@ import SoftwareTestingIcon from "../resources/images/software_testing";
 import EmbeddedSystemsIcon from "../resources/images/embedded_systems";
 import AlgorithmDesignIcon from "../resources/images/algorithms";
 
+const skills = [
+    {
+        "title": "C",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "C++",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "Python",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        title: "Firebase",
+        icon: FrontendDevelopmentIcon
+    },
+    {
+        "title": "Java",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "Homelab",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "Git",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "React",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "JavaScript",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "HTML/CSS",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "Flask",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "Spring Boot",
+        "icon": FrontendDevelopmentIcon
+    },
+    {
+        "title": "Postman",
+        "icon": FrontendDevelopmentIcon
+    }
+]
+
 export default function About() {
     return (
         <article>
@@ -56,6 +111,14 @@ export default function About() {
             </section>
             <section>
                 <h2>Skills</h2>
+                <div className="skills-container">
+                    {skills.map((skill, idx) => (
+                        <div key={idx} className="skill-item">
+                            <skill.icon className="skill-icon" />
+                            <span>{skill.title}</span>
+                        </div>
+                    ))}
+                </div>
             </section>
         </article>
     )
