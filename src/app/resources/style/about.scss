@@ -21,11 +21,12 @@ section:first-of-type {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        background-color: var.$overlay1;
+        background-color: var.$surface3;
         width: 50%;
         margin: 1%;
         padding: 2%;
         border-radius: var.$radius2;
+        box-shadow: var.$shadow2;
         
         svg {
             --scale: 40px;
@@ -39,7 +40,7 @@ section:first-of-type {
             flex-basis: var(--scale);
             border-radius: var.$radius2;
             border: 1px solid var.$overlay1;
-            box-shadow: var.$shadow2;
+            box-shadow: var.$shadow3;
             align-self: flex-start;
         }
 
