@@ -30,7 +30,7 @@ export default function Resume() {
                 <div>
                     <h3>Mach85 Inc. - Software Developer</h3>
                     <p>Frederiction, NB (Hybrid)</p>
-                    <span></span>
+                    <span>04/2025 - 08/2025</span>
                 </div>
                 <div>
                     <h3>Mach85 Inc. - Software Developer</h3>

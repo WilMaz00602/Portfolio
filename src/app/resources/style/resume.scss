@@ -26,7 +26,7 @@
             left: calc(var(--size) / 2 * -1);
 
             background-color: var.$accent1;
-            fill: var.$base;
+            fill: white; // var.$base; NOT WORKING
             border-radius: 50%;
             border: 1px  var.$crust;
         }

@@ -1,66 +1,87 @@
 import styles from "../resources/style/about.scss";
+import React, { useEffect } from "react";
 
 import FrontendDevelopmentIcon from "../resources/images/frontend_development";
 import SoftwareTestingIcon from "../resources/images/software_testing";
 import EmbeddedSystemsIcon from "../resources/images/embedded_systems";
 import AlgorithmDesignIcon from "../resources/images/algorithms";
 
-const skills = [
+
+const languages = [
     {
         "title": "C",
-        "icon": FrontendDevelopmentIcon
+        "icon": "/logos/c.svg"
     },
     {
         "title": "C++",
-        "icon": FrontendDevelopmentIcon
+        "icon": "/logos/c++.svg"
     },
     {
         "title": "Python",
-        "icon": FrontendDevelopmentIcon
-    },
-    {
-        title: "Firebase",
-        icon: FrontendDevelopmentIcon
+        "icon": "/logos/python.svg"
     },
     {
         "title": "Java",
-        "icon": FrontendDevelopmentIcon
-    },
-    {
-        "title": "Homelab",
-        "icon": FrontendDevelopmentIcon
-    },
-    {
-        "title": "Git",
-        "icon": FrontendDevelopmentIcon
-    },
-    {
-        "title": "React",
-        "icon": FrontendDevelopmentIcon
+        "icon": "/logos/java.svg"
     },
     {
         "title": "JavaScript",
-        "icon": FrontendDevelopmentIcon
+        "icon": "/logos/javascript.svg"
+    },
+]
+const skills = [
+    {
+        "title": "Firebase",
+        "icon": "/logos/firebase.svg"
+    },
+    {
+        "title": "Homelab",
+        "icon": "/logos/homelab.svg"
+    },
+    {
+        "title": "React",
+        "icon": "/logos/react.svg"
     },
     {
         "title": "HTML/CSS",
-        "icon": FrontendDevelopmentIcon
+        "icon": "/logos/html.svg"
     },
     {
         "title": "Flask",
-        "icon": FrontendDevelopmentIcon
+        "icon": "/logos/flask.svg"
     },
-    {
-        "title": "Spring Boot",
-        "icon": FrontendDevelopmentIcon
-    },
-    {
-        "title": "Postman",
-        "icon": FrontendDevelopmentIcon
-    }
 ]
 
 export default function About() {
+
+    useEffect(() => {
+        const skillsContainers = document.querySelectorAll(".skills-container");
+
+        skillsContainers.forEach((container) => {
+            let isScrolling = false;
+
+            const handleWheel = (event) => {
+                event.preventDefault();
+
+                // Use requestAnimationFrame for smoother scrolling
+                if (!isScrolling) {
+                    isScrolling = true;
+                    requestAnimationFrame(() => {
+                        container.scrollLeft += event.deltaY/1;
+                        isScrolling = false;
+                    });
+                }
+            };
+
+            container.addEventListener("wheel", handleWheel);
+
+            // Cleanup event listener on unmount
+            return () => {
+                container.removeEventListener("wheel", handleWheel);
+            };
+        });
+    }, []);
+
     return (
         <article>
             <header>
@@ -111,13 +132,29 @@ export default function About() {
             </section>
             <section>
                 <h2>Skills</h2>
-                <div className="skills-container">
-                    {skills.map((skill, idx) => (
-                        <div key={idx} className="skill-item">
-                            <skill.icon className="skill-icon" />
-                            <span>{skill.title}</span>
-                        </div>
-                    ))}
+                <div className="skill-containers">
+                    <div className="skills-container">
+                        {languages.map((skill, idx) => (
+                            <div key={idx} className="skill-item">
+                                <img 
+                                    src={skill.icon} 
+                                    alt={skill.title} 
+                                    className="skill-icon" />
+                                <span>{skill.title}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="skills-container">
+                        {skills.map((skill, idx) => (
+                            <div key={idx} className="skill-item">
+                                <img 
+                                    src={skill.icon} 
+                                    alt={skill.title} 
+                                    className="skill-icon" />
+                                <span>{skill.title}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
         </article>
